@@ -1,5 +1,6 @@
-import type { NextPage } from 'next'
+import type {NextPage} from 'next'
 import Head from 'next/head'
+import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +9,11 @@ const Home: NextPage = () => {
         <title>Twitter clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <main>
+        <Sidebar/>
+      </main>
+
     </div>
   )
 }
