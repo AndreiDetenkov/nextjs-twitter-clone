@@ -1,5 +1,5 @@
-import type {NextPage} from 'next'
-import Head from 'next/head'
+import type {NextPage} from "next";
+import Head from "next/head";
 import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
@@ -11,11 +11,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Sidebar/>
+        <Sidebar />
       </main>
-
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
