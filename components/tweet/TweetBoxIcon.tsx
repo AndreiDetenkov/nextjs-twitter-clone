@@ -1,7 +1,13 @@
-import React from "react";
+import React, {SVGProps} from "react";
 
-const TweetBoxMenu = ({ Icon }) => {
-  return <Icon></Icon>;
+type IconType = {
+  Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 };
 
-export default TweetBoxMenu;
+const TweetBoxIcon = ({ Icon }: IconType) => {
+  return (
+    <Icon className="w-5 h-5 cursor-pointer transition-transform duration-150 ease-out hover:scale-125" />
+  );
+};
+
+export default TweetBoxIcon;

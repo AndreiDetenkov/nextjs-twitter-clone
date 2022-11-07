@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, {useMemo, useState} from "react";
 import Image from "next/image";
 import {
-  PhotoIcon,
-  MagnifyingGlassCircleIcon,
-  FaceSmileIcon,
   CalendarIcon,
+  FaceSmileIcon,
+  MagnifyingGlassCircleIcon,
   MapPinIcon,
+  PhotoIcon,
 } from "@heroicons/react/24/outline";
+import TweetBoxIcon from "./TweetBoxIcon";
 
 const TweetBox = () => {
   const [tweet, setTweet] = useState<string>("");
+
+  const iconsMenu = useMemo(
+    () => [
+      PhotoIcon,
+      MagnifyingGlassCircleIcon,
+      FaceSmileIcon,
+      CalendarIcon,
+      MapPinIcon,
+    ],
+    []
+  );
 
   return (
     <div className="flex space-x-2 p-5">
@@ -32,11 +44,9 @@ const TweetBox = () => {
           />
           <div className="flex items-center">
             <div className="flex flex-1 space-x-2 text-twitter">
-              <PhotoIcon className="w-5 h-5 cursor-pointer transition-transform duration-150 ease-out" />
-              <MagnifyingGlassCircleIcon className="w-5 h-5" />
-              <FaceSmileIcon className="w-5 h-5" />
-              <CalendarIcon className="w-5 h-5" />
-              <MapPinIcon className="w-5 h-5" />
+              {iconsMenu.map((icon, index) => (
+                <TweetBoxIcon Icon={icon} key={index} />
+              ))}
             </div>
 
             <button
