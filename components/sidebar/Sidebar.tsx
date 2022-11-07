@@ -14,12 +14,13 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col col-span-2 items-center md:items-start px-4">
       <Image
         src="/logo-twitter.png"
         alt="twitter logo"
         width={40}
         height={40}
+        className="m-3"
       />
       <SidebarRow Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={HashtagIcon} title="Explore" />
