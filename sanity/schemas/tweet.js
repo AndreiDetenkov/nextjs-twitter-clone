@@ -25,19 +25,8 @@ export default {
       type: "string",
     },
     {
-      name: "publishedAt",
-      title: "Published at",
-      type: "datetime",
-      options: {
-        dateFormat: "DD-MM-YYYY",
-        timeFormat: "HH:mm",
-        timeStep: 15,
-        calendarTodayLabel: "Today",
-      },
-    },
-    {
-      name: "poster",
-      title: "Poster",
+      name: "image",
+      title: "Image",
       type: "image",
     },
   ],
